@@ -5,7 +5,6 @@
 #' @import RColorBrewer
 #' @import multiplot
 #' @importFrom msigdb msigdb.genesets
-#' @importClassesFrom dplyr tbl
 
 # genes-clusters 1-to-1 relation
 # gene sets: list (gene sets) of vectors (genes)
