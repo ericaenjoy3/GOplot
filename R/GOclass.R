@@ -4,7 +4,8 @@
 #' @import ggdendro
 #' @import RColorBrewer
 #' @import multiplot
-#' @importClassesFrom tbl_df tidyverse
+#' @importFrom msigdb msigdb.genesets
+#' @importClassesFrom tidyverse tbl_df
 
 # genes-clusters 1-to-1 relation
 # gene sets: list (gene sets) of vectors (genes)
