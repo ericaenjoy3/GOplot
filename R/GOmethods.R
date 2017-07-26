@@ -1,3 +1,4 @@
+#' @include GOclass.R
 #' calculate OR
 #' ((g present in clus c and pathway p)/(g present in clus c but absent in pathway p))((g absent in clus c but present in pathway p)/(g absent in clus c and absent in pathway p))
 #' reshuffle gene sets 100,000 times, and calcualte OR

@@ -1,3 +1,4 @@
+#' @include GOclass.R
 #' select db for GO
 #' initate gset class
 #' minor must be set to NULL to de-select minor DB.
