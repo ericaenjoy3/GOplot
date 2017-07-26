@@ -6,7 +6,7 @@
 * library(ggdendro)
 * library(RcolorBrewer)
 * library(GOtest) # adapted library from MHW
-* library(multiplot) # adapted code of [multiple graphs on one page] from (http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)/)
+* library(multiplot) # adapted code from (http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)/)
 
 
 ## Installation
