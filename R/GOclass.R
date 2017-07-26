@@ -1,11 +1,11 @@
-#' @import GOtest
-#' @import tidyverse
+#' @importFrom GOtest GOtest
+#' @importFrom tidyverse as_data_frame
 #' @import ggplot2
 #' @import ggdendro
 #' @import RColorBrewer
 #' @import multiplot
 #' @importFrom msigdb msigdb.genesets
-#' @importClassesFrom dplyr tbl_df
+#' @importClassesFrom tibble tbl_df
 
 # genes-clusters 1-to-1 relation
 # gene sets: list (gene sets) of vectors (genes)
