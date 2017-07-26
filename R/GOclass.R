@@ -14,7 +14,7 @@
 #' @slot tbl tbl_df object  contains = c("tbl_df"),
 #' @exportClass gset
 gset<-setClass("gset",
-  representation(tbl="tbl_df"),
+  representation(tbl="tbl"),
   validity = function(object) {
     if (nrow(object@tbl)<1) {
       return("tbl is empty.")
@@ -29,7 +29,7 @@ gset<-setClass("gset",
 #' @slot tbl tbl_df object
 #' @exportClass gclus
 gclus<-setClass("gclus",
-  representation(tbl="tbl_df"),
+  representation(tbl="tbl"),
   validity = function(object){
     if (nrow(object@tbl)<1) {
       return("tbl is empty.")
@@ -47,7 +47,7 @@ gclus<-setClass("gclus",
 #' @slot tbl tbl_df object
 #' @exportClass go_res
 go_res<-setClass("go_res",
-  representation(tbl="tbl_df"),
+  representation(tbl="tbl"),
   validity = function(object){
     if (nrow(object@tbl)<1) {
       return("tbl is empty.")
