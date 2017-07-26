@@ -1,5 +1,5 @@
-#' @importFrom GOtest GOtest
-#' @importFrom tidyverse as_data_frame
+#' @import GOtest
+#' @import tidyverse
 #' @import ggplot2
 #' @import ggdendro
 #' @import RColorBrewer
