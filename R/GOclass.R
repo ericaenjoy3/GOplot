@@ -5,10 +5,10 @@
 #' @import RcolorBrewer
 #' @import multiplot
 
-#' genes-clusters 1-to-1 relation
-#' gene sets: list (gene sets) of vectors (genes)
-#' per cluster GO terms: GOlabel, OR, pvalue, qvalue
-#' per cluster for a subset of GO terms: GO relationship matrix
+# genes-clusters 1-to-1 relation
+# gene sets: list (gene sets) of vectors (genes)
+# per cluster GO terms: GOlabel, OR, pvalue, qvalue
+# per cluster for a subset of GO terms: GO relationship matrix
 #' @slot tbl tbl_df object
 #' @exportClass gset
 gset<-setClass("gset",
