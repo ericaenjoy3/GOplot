@@ -4,7 +4,7 @@
 * library(tidyverse)
 * library(ggplot2)
 * library(ggdendro)
-* library(RcolorBrewer)
+* library(RColorBrewer)
 * library(GOtest) # adapted library from MHW
 * library(multiplot) # adapted code from (http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)/)
 

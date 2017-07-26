@@ -2,7 +2,7 @@
 #' @import tidyverse
 #' @import ggplot2
 #' @import ggdendro
-#' @import RcolorBrewer
+#' @import RColorBrewer
 #' @import multiplot
 
 # genes-clusters 1-to-1 relation
