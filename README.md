@@ -48,7 +48,7 @@ gset.obj <- selDB(major="C5.BP")
 ## Initialize a gclus object (with colnames of gene and clus)
 For example,
 
-gclus.obj <- new("gclus", tbl=as_data_frame(data.frame(
+gclus.obj <- new("gclus", tbl=tidyverse::as_data_frame(data.frame(
   gene = as.character(c("Nanog","Rpl3","Rpl4","Mbl2","Ubr1","Herc2","Asb4","Rnf123","Klf4","Uba5")),
   clus = factor(c(rep(1,6),rep(2,4)))
   ))
