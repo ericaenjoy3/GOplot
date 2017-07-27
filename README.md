@@ -6,6 +6,7 @@
 * library(readr)
 * library(ggplot2)
 * library(ggdendro)
+* library(rlang)
 * library(msigdb) # adapted library from MHW
 * library(multiplot) # https://github.com/ericaenjoy3/multiplot
 * library(RColorBrewer)
