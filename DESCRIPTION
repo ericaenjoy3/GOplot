@@ -1,7 +1,7 @@
 Package: GOplot
 Title: What the Package Does (one line, title case)
 Version: 0.0.0.9000
-Authors@R: person("Yiyuan", "Liu", email = "ericaenjoy3@yahoo.co.uk", role = c("aut", "cre"))
+Authors@R: person("Erica", "Liu", email = "ericaenjoy3@yahoo.co.uk", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 Depends: R (>= 3.4.0)
 Imports: multiplot, msigdb, dplyr, tibble, methods, ggplot2, ggdendro, 
