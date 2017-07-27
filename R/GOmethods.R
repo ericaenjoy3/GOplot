@@ -49,7 +49,7 @@ setMethod(f = "GO",
 setMethod(f = "write_GO",
   signature = c(go_set.obj="gset", go_res.obj="go_res", nms="character"),
   definition = function(go_set.obj, go_res.obj, nms) {
-    if(!file.info(nms)$isdir) dir.create(nms, showWarnings = FALSE, recursive = TRUE)
+    if(is.na(file.info(nms)$isdir) || !file.info(nms)$isdir) dir.create(nms, showWarnings = FALSE, recursive = TRUE)
     # merge genes for each set into one-line
     gset.dict <- go_set.obj@tbl %>% group_by(set) %>% mutate(gene=paste(gene,collapse=";")) %>% unique()
     dat <- go_res.obj@tbl[,c("clus","set", "or", "pval", "padj")] %>% left_join(gset.dict, by="set")
@@ -62,7 +62,7 @@ setMethod(f = "write_GO",
 setMethod(f = "simi",
   signature = c(go_set.obj="gset", go_res.obj="go_res", nms="character"),
   definition = function(go_set.obj, go_res.obj, nms) {
-    if(!file.info(nms)$isdir) dir.create(nms, showWarnings = FALSE, recursive = TRUE)
+    if(is.na(file.info(nms)$isdir) || !file.info(nms)$isdir) dir.create(nms, showWarnings = FALSE, recursive = TRUE)
     for (i in seq_along(levels(go_res.obj@tbl$clus))) {
       per_clus <- filter(go_res.obj@tbl, clus==levels(go_res.obj@tbl$clus)[i]) %>% droplevels()
       path <- filter(go_set.obj@tbl, set %in% pull(per_clus, "set")) %>% droplevels()
