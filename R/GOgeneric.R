@@ -1,7 +1,7 @@
 #' @include GOclass.R GOgeneric.R
 #' @export GO
 setGeneric(name="GO",
-  def=function(gclus.obj, gset.obj, filterPADJ=TRUE, filterOR=TRUE){
+  def=function(gclus.obj, gset.obj, filterP=TRUE, filterOR=TRUE){
     standardGeneric("GO")
   }
 )
