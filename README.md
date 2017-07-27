@@ -1,15 +1,17 @@
 # GOplot
 
 ## Dependency of R packages
-* library(tidyverse)
 * library(dplyr)
 * library(tibble)
 * library(readr)
 * library(ggplot2)
 * library(ggdendro)
-* library(RColorBrewer)
 * library(msigdb) # adapted library from MHW
 * library(multiplot) # https://github.com/ericaenjoy3/multiplot # adapted code from (http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)/)
+* library(RColorBrewer)
+* library(methods)
+* library(stats)
+* library(grDevices)
 
 
 ## Installation
