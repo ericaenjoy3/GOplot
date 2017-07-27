@@ -5,7 +5,7 @@
 #' calculate Pval
 #' calculate Padj
 setMethod(f = "GO",
-  signature=c(gclus.obj = "gclus", gset.obj = "gset", filterPADJ="logical", filterOR="logical"),
+  signature=c(gclus.obj = "gclus", gset.obj = "gset", filterPADJ="numeric", filterOR="logical"),
   definition = function(gclus.obj, gset.obj, filterPADJ, filterOR) {
     # filter gclus.obj based all.gene
     gclus.tbl <- filter(gclus.obj@tbl, gene %in% gset.obj@tbl$gene) %>% droplevels()
@@ -36,7 +36,7 @@ setMethod(f = "GO",
     }
     res <- as_tibble(cbind(res, OR, pval, padj = p.adjust(pval, method = "fdr")))
     # filter by frd<0.01
-    if (filterPADJ) res <- filter(res, padj<0.01) %>% droplevels()
+    if (filterPADJ) res <- filter(res, padj<filterPADJ) %>% droplevels()
     if (filterOR) res <- filter(res, is.finite(OR)) %>% droplevels()
     colnames(res) <- c("set", "clus", "or", "pval", "padj")
     go_set.obj <- new("gset", tbl = filter(gset.tbl, set %in% res$set) %>% droplevels())
