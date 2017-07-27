@@ -69,7 +69,7 @@ go_res.obj <- res.list$go_res.obj
 * nms is a directory with prefix for output
 * output file named as [nms]_GOres.txt
 
-write_GO((go_set.obj, go_res.obj, nms)
+write_GO(go_set.obj, go_res.obj, nms)
 
 ## Plot GO results to png
 

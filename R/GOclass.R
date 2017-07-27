@@ -4,7 +4,7 @@
 #' @import methods
 #' @import multiplot
 #' @importFrom msigdb msigdb.genesets
-#' @importFrom dplyr %>% group_by summarise pull filter
+#' @importFrom dplyr %>% group_by summarise pull filter mutate left_join
 #' @importFrom tibble as_tibble
 #' @importFrom grDevices dev.off png
 #' @importFrom stats as.dist fisher.test hclust p.adjust
