@@ -2,6 +2,9 @@
 
 ## Dependency of R packages
 * library(tidyverse)
+* library(dplyr)
+* library(tibble)
+* library(readr)
 * library(ggplot2)
 * library(ggdendro)
 * library(RColorBrewer)
