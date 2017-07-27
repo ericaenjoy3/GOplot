@@ -1,10 +1,14 @@
-#' @import GOtest
-#' @import tidyverse
 #' @import ggplot2
 #' @import ggdendro
 #' @import RColorBrewer
+#' @import methods
 #' @import multiplot
 #' @importFrom msigdb msigdb.genesets
+#' @importFrom dplyr %>% group_by summarise pull filter
+#' @importFrom tibble as_tibble
+#' @importFrom grDevices dev.off png
+#' @importFrom stats as.dist fisher.test hclust p.adjust
+#' @importFrom readr write_tsv
 
 # genes-clusters 1-to-1 relation
 # gene sets: list (gene sets) of vectors (genes)

@@ -18,6 +18,6 @@ selDB<-function(major=c("C2.CP","C3.MIR","C3.TFT","C5.BP","C5.CC"), minor=c("Rea
     db[["geneset.names"]] <- gsub("Reactome_*", "", db[["geneset.names"]],ignore.case=TRUE)
   }
   sizes <- sapply(db[["genesets"]], length)
-  dat <- as_data_frame(data.frame(gene = unlist(db[["genesets"]]), set = rep(db[["geneset.names"]], sizes), stringsAsFactors = TRUE))
+  dat <- as_tibble(data.frame(gene = unlist(db[["genesets"]]), set = rep(db[["geneset.names"]], sizes), stringsAsFactors = TRUE))
   return(new("gset",tbl=dat))
 }

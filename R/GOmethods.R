@@ -34,7 +34,7 @@ setMethod(f = "GO",
         pval[iter] <- htest.obj$p.value
       }
     }
-    res <- as_data_frame(cbind(res, OR, pval, padj = p.adjust(pval, method = "fdr")))
+    res <- as_tibble(cbind(res, OR, pval, padj = p.adjust(pval, method = "fdr")))
     # filter by frd<0.01
     if (filterPADJ) res <- filter(res, padj<0.01) %>% droplevels()
     if (filterOR) res <- filter(res, is.finite(OR)) %>% droplevels()
@@ -53,7 +53,7 @@ setMethod(f = "write_GO",
     # merge genes for each set into one-line
     gset.dict <- go_set.obj@tbl %>% group_by(set) %>% mutate(gene=paste(gene,collapse=";")) %>% unique()
     dat <- go_res.obj@tbl[,c("clus","set", "or", "pval", "padj")] %>% left_join(gset.dict, by="set")
-    write_tsv(dat, past0(nms,"_GOres.txt"), col_names = TRUE)
+    write_tsv(dat, paste0(nms,"_GOres.txt"), col_names = TRUE)
     invisible(TRUE)
   }
 )

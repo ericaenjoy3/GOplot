@@ -5,7 +5,7 @@
 * library(ggplot2)
 * library(ggdendro)
 * library(RColorBrewer)
-* library(GOtest) # adapted library from MHW
+* library(msigdb) # adapted library from MHW
 * library(multiplot) # https://github.com/ericaenjoy3/multiplot # adapted code from (http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)/)
 
 
@@ -42,13 +42,15 @@ Current available  database:
 For example,
 
 gset.obj <- selDB(major="C2.CP", minor="Reactome", type="symbols", species="mouse")
+
 or
+
 gset.obj <- selDB(major="C5.BP")
 
 ## Initialize a gclus object (with colnames of gene and clus)
 For example,
 
-gclus.obj <- new("gclus", tbl=dplyr::as_data_frame(data.frame(
+gclus.obj <- new("gclus", tbl=tibble:::as_tibble(data.frame(
   gene = as.character(c("Nanog","Rpl3","Rpl4","Mbl2","Ubr1","Herc2","Asb4","Rnf123","Klf4","Uba5")),
   clus = factor(c(rep(1,6),rep(2,4)))
   ))
@@ -57,7 +59,9 @@ gclus.obj <- new("gclus", tbl=dplyr::as_data_frame(data.frame(
 ## Perform GO analysis
 
 res.list <- GO(gclus.obj, gset.obj, filterPADJ=FALSE, filterOR=TRUE)
+
 go_set.obj <- res.list$go_set.obj
+
 go_res.obj <- res.list$go_res.obj
 
 ## Output GO results to file
