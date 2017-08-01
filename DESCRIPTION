@@ -1,7 +1,8 @@
 Package: GOplot
 Title: GO Enrichment Test and Clustering
-Version: 0.0.0.9000
-Authors@R: person("Erica", "Liu", email = "ericaenjoy3@yahoo.co.uk", role = c("aut", "cre"))
+Version: 0.0.0.9
+Author: Erica Liu
+Maintainer: Erica Liu <ericaenjoy3@yahoo.co.uk>
 Description: Perform GO enrichment analysis using fisher's exact test and cluster enriched gene sets.
 Depends: R (>= 3.4.0)
 Imports: multiplot, msigdb, dplyr, tibble, methods, ggplot2, ggdendro, 
