@@ -3,7 +3,7 @@
 #' @title Odds Ratio Analysis
 #' @name GO
 #' @rdname GO-methods
-# @aliases GO
+#' @aliases GO
 #' @description
 #' Odds ratio and P value are computed from \code{\link{fisher.test}}.
 #' @param gclus.obj A \code{gclus} object.
@@ -36,7 +36,7 @@ setGeneric(name="GO",
 #' @title Output GO Results
 #' @name write_GO
 #' @rdname write_GO-methods
-# @aliases write_GO
+#' @aliases write_GO
 #' @description Write GO results into a tsv file
 #' @param go_set.obj A go_set object.
 #' @param go_res.obj A go_res object.
@@ -51,7 +51,7 @@ setGeneric(name="write_GO",
 #' @title Presentation of similar gene sets
 #' @name simi
 #' @rdname simi-methods
-# @aliases simi
+#' @aliases simi
 #' @description Estimate similarity between gene set terms and plot clustering
 #' @param go_set.obj A go_set object.
 #' @param go_res.obj A go_res object.
