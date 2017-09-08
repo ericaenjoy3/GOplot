@@ -19,7 +19,10 @@
 ```
 devtools::install_github("ericaenjoy3/GOplot")
 ```
-
+## Load the package
+```
+library(GOplot)
+```
 ## Use selDB function to create/initialize a new gene set (gset) object
 Current available  database:
 * "C1.CYTO": positional gene sets;
@@ -65,5 +68,5 @@ write_GO(go_set.obj, go_res.obj, nms='test')
 ## Plot GO results to png
 * output file named as [nms]_GOhclus[clusname].png
 ```
-simi(go_set.obj, go_res.obj, nms=test)
+simi(go_set.obj, go_res.obj, nms='test')
 ```
