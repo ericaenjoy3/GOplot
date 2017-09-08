@@ -45,7 +45,8 @@ gset.obj <- selDB(major="C5.BP", minor=NA, type="symbols", species="mouse")
 ```
 ## Initialize a gclus object (with colnames of gene and clus)
 For example, prepare gene signatures to be tested
-```signatures=data.frame(gene = as.character(c("Nanog","Rpl3","Rpl4","Mbl2","Ubr1","Herc2","Asb4","Rnf123","Klf4","Uba5")),
+```
+signatures=data.frame(gene = as.character(c("Nanog","Rpl3","Rpl4","Mbl2","Ubr1","Herc2","Asb4","Rnf123","Klf4","Uba5")),
 	clus = factor(rep(c('Group1','Group2'),c(6,4))))
 gclus.obj <- new("gclus", tbl=tibble:::as_tibble(signatures))
 ```
@@ -59,10 +60,10 @@ go_res.obj <- res.list$go_res.obj
 * nms is the file prefix for output
 * output file named as [nms]_GOres.txt
 ```
-write_GO(go_set.obj, go_res.obj, nms)
+write_GO(go_set.obj, go_res.obj, nms='test')
 ```
 ## Plot GO results to png
 * output file named as [nms]_GOhclus[clusname].png
 ```
-simi(go_set.obj, go_res.obj, nms)
+simi(go_set.obj, go_res.obj, nms=test)
 ```
