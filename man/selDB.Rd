@@ -5,17 +5,17 @@
 \title{Select db for GO}
 \usage{
 selDB(major = c("C2.CP", "C3.MIR", "C3.TFT", "C5.BP", "C5.CC"),
-  minor = c("Reactome"), type = c("symbols", "entrez"),
+  minor = NA, type = c("symbols", "entrez"),
   species = c("human", "mouse"))
 }
 \arguments{
-\item{major, }{the major category.}
+\item{major}{the major category.}
 
-\item{minor, }{a character string to subset through grep. Set NA to ignore.}
+\item{minor}{a character string to subset gene categories with matched names through \code{grep}. Set NA to ignore.}
 
-\item{type, }{either symbols or entrez.}
+\item{type}{either \code{symbols} or \code{entrez}.}
 
-\item{species, }{either human or mouse.}
+\item{species}{either \code{human} or \code{mouse}.}
 }
 \value{
 A \code{gset} object.
@@ -25,4 +25,7 @@ Initate gset class by making use of gene sets from package \code{msgidb}
 }
 \details{
 For details about the gene sets, please see package \code{msgidb}.
+}
+\examples{
+gset.obj <- selDB(major="C2.CP", minor="Reactome", type="symbols", species="mouse")
 }

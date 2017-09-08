@@ -9,7 +9,7 @@
 #' @return
 #' A \code{gset} object.
 #' @export selDB
-selDB<-function(major=c("C2.CP","C3.MIR","C3.TFT","C5.BP","C5.CC"), minor=c("Reactome"), type=c('symbols', 'entrez'), species=c('human','mouse')) {
+selDB<-function(major=c("C2.CP","C3.MIR","C3.TFT","C5.BP","C5.CC"), minor=NA, type=c('symbols', 'entrez'), species=c('human','mouse')) {
   major <- match.arg(major,several.ok=TRUE)
   type <- match.arg(type)
   species <- match.arg(species)
